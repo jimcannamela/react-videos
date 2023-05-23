@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './NavBar';
 import VideoPlayer from './VideoPlayer';
 import VideoList from './VideoList';
-import { useState, useEffect } from 'react';
 import videoData from './videoData';
 
 function App() {

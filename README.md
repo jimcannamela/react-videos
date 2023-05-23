@@ -1,4 +1,4 @@
-# SF YouTube
+# SF Video
 
 Today, you will `useReducer` to implement the state of a simple youtube-like application.  You are provided some video data (in `videoData.js`) and several React components:
 

@@ -1,4 +1,3 @@
-import React from "react";
 import VideoListItem from "./VideoListItem";
 
 function VideoList({ videos }) {

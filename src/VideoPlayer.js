@@ -1,5 +1,3 @@
-import React from 'react';
-
 function VideoPlayer({ selectedVideo }) {
   return (
     <div className="video-player">
