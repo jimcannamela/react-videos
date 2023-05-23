@@ -1,5 +1,6 @@
 
 function VideoListItem({ video }) {
+  console.log(video);
   return (
     <div className="video-list-item">
       <header>
