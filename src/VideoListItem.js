@@ -1,11 +1,15 @@
 import React from "react";
 
-function VideoListItem({ video, handleListItemClick }) {
+function VideoListItem({ video }) {
   return (
-    <div onClick={() => handleListItemClick(video)} className="video-list-item">
-      <img src={video.thumbnail.url} className="video-list-item-thumbnail"></img>
-      <h6 className="video-list-item-title">{video.title}</h6>
-      <h6 className="video-list-item-channel">{video.channelTitle}</h6>
+    <div className="video-list-item">
+      <header>
+        <img src={video.snippet.thumbnails.default.url} className="video-list-item-thumbnail"></img>
+      </header>
+      <section>
+        <p className="video-list-item-title">{video.snippet.title}</p>
+        <p className="video-list-item-channel">{video.snippet.channelTitle}</p>
+      </section>
     </div>
   )
 }

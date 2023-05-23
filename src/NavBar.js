@@ -3,7 +3,14 @@ import React from 'react';
 function NavBar() {
   return (
     <div className="app-nav">
-      <input type="text" ></input>
+      <h1>SF Video</h1>
+      <form>
+        <label htmlFor="search">
+          Search 
+        </label>
+        <input name="search" type="text" ></input>
+        <input type="submit" />
+      </form>
     </div>
   )
 }

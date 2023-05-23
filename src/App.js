@@ -4,39 +4,20 @@ import NavBar from './NavBar';
 import VideoPlayer from './VideoPlayer';
 import VideoList from './VideoList';
 import { useState, useEffect } from 'react';
-
-/*
-  GET:     "Give me the data!"
-  POST:    "Here's some new data, plz save!"
-  PUT:     "Here's some updated data, overwrite the old data plz!"
-  DELETE:  "Please get rid of this data!"
-*/
+import videoData from './videoData';
 
 function App() {
 
-  let [videos, setVideos] = useState([]);
-  let [selectedVideo, setSelectedVideo] = useState(null);
-
   function fetchVideos() {
-    return fetch("https://sf-collective-api.herokuapp.com/videos", { method: "GET" } )
-    .then(response => response.json())
-    .then(newVideoList => setVideos(newVideoList));
-  }
-
-  useEffect(() => {
-    fetchVideos();
-  }, [])
-
-  function handleVideoSelect(video) {
-    setSelectedVideo(video);
+    return videoData;
   }
 
   return (
     <div className="App">
       <NavBar />
       <section className="content-container">
-        <VideoPlayer selectedVideo={selectedVideo}/>
-        <VideoList videos={videos} handleVideoListItemClick={handleVideoSelect}/>
+        <VideoPlayer selectedVideo={null}/>
+        <VideoList videos={fetchVideos()}/>
       </section>
     </div>
   );
