@@ -11,7 +11,7 @@ function VideoListItem({ video, dispatch }) {
   return (
     <div className="video-list-item" onClick={selectVideo} >
       <header>
-        <img src={video.snippet.thumbnails.default.url} className="video-list-item-thumbnail"></img>
+        <img src={video.snippet.thumbnails.default.url} className="video-list-item-thumbnail" alt="video"></img>
       </header>
       <section>
         <p className="video-list-item-title">{video.snippet.title}</p>
