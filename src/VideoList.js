@@ -1,13 +1,10 @@
 import VideoListItem from "./VideoListItem";
 
-function VideoList({ videos, selectVideo }) {
-console.log(selectVideo);
-console.log(videos);
+function VideoList({ videos, dispatch }) {
   return (
     <div className="video-list">
       {
-        videos.map((videoData) => <VideoListItem onClick={selectVideo}  video={videoData}/>)
-        
+        videos.map((videoData) => <VideoListItem video={videoData} dispatch={dispatch}/>)        
       }
     </div>
   )

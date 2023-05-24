@@ -1,8 +1,15 @@
 
-function VideoListItem({ video }) {
-  console.log(video);
+function VideoListItem({ video, dispatch }) {
+
+  function selectVideo() {
+    const action = {
+      type: "SET_SELECTED_VIDEO",
+      payload: video
+    }
+    dispatch(action);
+  }
   return (
-    <div className="video-list-item">
+    <div className="video-list-item" onClick={selectVideo} >
       <header>
         <img src={video.snippet.thumbnails.default.url} className="video-list-item-thumbnail"></img>
       </header>
